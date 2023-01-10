@@ -1,0 +1,26 @@
+
+<header>
+  <div class="navbar navbar-dark bg-warning  shadow-sm">
+      <div class="navbar-brand align-item-center d-flex">
+        <div class="ms-4">
+          <i style="font-size: 40px;" class="fas fa-shipping-fast text-black" >&nbsp;</i>
+          <strong class="text-black" style="font-size: 30px;">ShoppingCart</strong>
+        </div>
+        <button routerLink="products" class="btn btn-outline-dark ms-5">
+          <i class="fa fa-product-hunt" style="font-size: 30px;" aria-hidden="true">Products</i>
+          <div style="font-size: 10px;" class="badge bg-danger"></div>
+        </button>
+          <input type="text" class="form-control ms-5" [(ngModel)]="searchTerm"  (keyup)="search($event)"   placeholder="search products">
+          <span class="fas fa-search search-icon text-black mt-2 ms-2"></span>
+
+
+      </div>
+      <button routerLink="cart" class="btn btn-dark me-5">
+          <i style="font-size: 30px;" class="fas fa-cart-plus text-warning"></i>
+          <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button>
+  </div>
+</header>
+
+
+
